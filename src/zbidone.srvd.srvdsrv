@@ -1,0 +1,4 @@
+@EndUserText.label: 'service definition per bidone'
+define service Zbidone {
+  expose ZC_BID_UTENTI;
+}

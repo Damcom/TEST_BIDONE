@@ -1,0 +1,20 @@
+managed implementation in class zbp_r_bid_utenti unique;
+strict ( 2 );
+
+define behavior for ZR_BID_UTENTI //alias <alias_name>
+persistent table zbid_utenti
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field ( readonly:update ) user_id;
+  mapping for zbid_utenti {
+    user_id=user_id;
+    name=name;
+    surname=surname;
+    role=role;
+  }
+}
